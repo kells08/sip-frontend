@@ -1,6 +1,6 @@
 console.log("DOM loaded");
 
-const endPoint = 'http://localhost:3000/api/v1/drinks';
+const endPoint = 'http://localhost:3000/api/v1/drinks?page=1&per_page=2';
 const drinksDiv = document.getElementsByClassName("flex")[1];
 const viewDrinks = document.getElementById("view-drinks");
 
