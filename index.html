@@ -48,7 +48,7 @@
 					</div>
 
 					<footer>
-						<a href="#" class="button">Login</a>
+						<a href="#" id="login-button" class="button">Login</a>
 					</footer>
 				</div>
 			</section>
@@ -57,9 +57,16 @@
 		<!-- Drinks We've Made - Main Body "Three" -->
 			<section id="three" class="wrapper align-center">
 				<div class="inner">
-					<div class="flex flex-2">
-						<!--Drinks will appear here from js-->
+					<div>
+						<a href="#" id="left-button" class="button"><span class="icon fa-arrow-left"></span></a>
 					</div>
+					<div class="flex flex-2">
+						<!---- Drinks will appear here from js ---->
+					</div>
+					<div>
+						<a href="#" id="right-button" class="button"><span class="icon fa-arrow-right"></span></a>
+					</div>
+
 				</div>
 			</section>
 
@@ -103,10 +110,10 @@
 							<label for="text">Instructions</label>
 							<textarea name="text" id="text" rows="9" placeholder="Shaken or stirred?  Tell us more.."></textarea>
 						</div>
-						
-						<ul class="actions">
-							<li><input value="Submit your drink" class="button alt" type="submit"></li>
-						</ul>
+						<!-- Submit Drink Button-->
+						<div>
+								<a href="#" id="submit-drink-button" class="button">Submit Drink</a>
+						</div>
 					</form>
 				</div>
 			</section>
