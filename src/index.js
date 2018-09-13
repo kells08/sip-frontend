@@ -1,8 +1,48 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const endPoint = 'http://localhost:3000/api/v1/drinks';
-  fetch(endPoint)
-    .then(res => res.json())
-    .then(console.log())
+console.log("DOM loaded");
+
+const endPoint = 'http://localhost:3000/api/v1/drinks';
+const drinksDiv = document.getElementsByClassName("flex")[1];
+const viewDrinks = document.getElementById("view-drinks");
+
+fetch(endPoint)
+  .then(res => res.json())
+  .then(showAllDrinks)
+
+function showAllDrinks(drinks) {
+  drinks.forEach(showOneDrink);
+}
+
+function showOneDrink(drink) {
+  drinksDiv.innerHTML += `
+      <article id=${drink.id}> 
+        <div class="image round">
+          <img src="${drink.image}" width="200" height="auto" />
+        </div>
+        <header>
+        <h3>${drink.name}</h3>
+        </header>
+        <p>${drink.likes} Likes</p>
+        <footer>
+        <a href="#" class="button">Learn More</a>
+        </footer>
+      </article>
+  `
+}
+
+viewDrinks.addEventListener("click", showDrinks);
+
+function showDrinks() {
+  event.preventDefault();
+  window.scrollTo(300, 500);
+}
+
+
+
+
+
+
+
+
       // json.forEach(drink => {
         // const markup = `
         // <li>
@@ -10,17 +50,3 @@ document.addEventListener('DOMContentLoaded', () => {
         //     <button>edit</button>
         //   </h3>
         // </li>`;
-
-        // document.querySelector('#notes-list').innerHTML += markup;
-    //   })
-    // );
-
-
-
-
-<<<<<<< HEAD
- 
-=======
-
->>>>>>> 3fd6982b24f4a7e62c9f5aa010f5d56d6b2e2570
-});
