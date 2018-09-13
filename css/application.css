@@ -1890,7 +1890,12 @@
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
 		width: 100%;
+		
 	}
+		
+		.flex a {
+			text-decoration: none;
+		}
 
 		.flex.flex-2 {
 			-moz-justify-content: space-between;
@@ -2951,7 +2956,7 @@
 		#banner .inner {
 			position: relative;
 			z-index: 10005;
-			padding-top: 4em;
+			padding-top: 3em;
 		}
 
 		#banner h1 {
