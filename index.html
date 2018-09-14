@@ -76,7 +76,9 @@
 					</div>
 
 					<footer>
-						<a href="#" id= "login-button" class="button">Login</a>
+
+						<a href="#" id="login-button" class="button">Login</a>
+
 					</footer>
 				</div>
 			</section>
@@ -85,9 +87,16 @@
 		<!-- Drinks We've Made - Main Body "Three" -->
 			<section id="three" class="wrapper align-center">
 				<div class="inner">
-					<div class="flex flex-2">
-						<!--Drinks will appear here from js-->
+					<div>
+						<a href="#" id="left-button" class="button"><span class="icon fa-arrow-left"></span></a>
 					</div>
+					<div class="flex flex-2">
+						<!---- Drinks will appear here from js ---->
+					</div>
+					<div>
+						<a href="#" id="right-button" class="button"><span class="icon fa-arrow-right"></span></a>
+					</div>
+
 				</div>
 			</section>
 
@@ -100,41 +109,42 @@
 			<!-- Make a drink: -->
 
 			<section>
-				<div class="inner" id="make-drink">
+				<div class="inner">
 					<br><br>
 					<h3>Sip on your own:</h3>
 
-					<form action="#" method="post">
+					<form id="make-drink">
 						<!-- Needs Name, Ingredients, Instructions, Likes, User ID-->
 						<!-- Drink Name Input-->
 						<div class="field half">
 							<label for="name">Drink Name</label>
-							<input name="name" id="name" type="text" placeholder="Drink Name">
+							<input name="drinkName" id="drinkName" type="text" placeholder="Drink Name">
 						</div>
 						<!-- User Name Input-->
 						<div class="field half">
 								<label for="name">User Name</label>
-								<input name="name" id="name" type="text" placeholder="User Name">
+								<input name="name" id="userName" type="text" placeholder="User Name">
 						</div>
 						<!-- Ingredients Inputs-->
 						<div class="field half first">
 							<label for="text">Drink Ingredients</label>
-							<input name="text" id="text" type="text" placeholder="Ingredient 1">
-							<input name="text" id="text" type="text" placeholder="Ingredient 2">
-							<input name="text" id="text" type="text" placeholder="Ingredient 3">
-							<input name="text" id="text" type="text" placeholder="Ingredient 4">
-							<input name="text" id="text" type="text" placeholder="Ingredient 5">
-							<input name="text" id="text" type="text" placeholder="Ingredient 6">
+							<input name="text" id="drinkIng1" type="text" placeholder="Ingredient 1">
+							<input name="text" id="drinkIng2" type="text" placeholder="Ingredient 2">
+							<input name="text" id="drinkIng3" type="text" placeholder="Ingredient 3">
+							<input name="text" id="drinkIng4" type="text" placeholder="Ingredient 4">
+							<input name="text" id="drinkIng5" type="text" placeholder="Ingredient 5">
+							<input name="text" id="drinkIng6" type="text" placeholder="Ingredient 6">
 						</div>
 						<!-- Instructions Input-->
 						<div class="field half second">
 							<label for="text">Instructions</label>
-							<textarea name="text" id="text" rows="9" placeholder="Shaken or stirred?  Tell us more.."></textarea>
+							<textarea name="text" id="drinkInstructions" rows="9" placeholder="Shaken or stirred?  Tell us more.."></textarea>
 						</div>
 
-						<ul class="actions">
-							<li><input value="Submit your drink" class="button alt" type="submit"></li>
-						</ul>
+						<!-- Submit Drink Button-->
+					
+						<button id="submit-drink-button" class="button">Submit Drink</button>
+					
 					</form>
 				</div>
 			</section>
