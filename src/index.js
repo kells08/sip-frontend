@@ -19,7 +19,7 @@ function showAllDrinks(drinks) {
 
 function showOneDrink(drink) {
   drinksDiv.innerHTML += `
-      <article id=${drink.id}> 
+      <article id=${drink.id}>
         <div class="image round">
           <img src="${drink.image}" width="200" height="auto" />
         </div>
@@ -49,6 +49,7 @@ back.addEventListener("click", function(event) {
   event.preventDefault();
   drinksDiv.innerHTML = "";
   page -= 1;
+
 
   fetch(`http://localhost:3000/api/v1/drinks?page=${page}&per_page=2`)
     .then(resp => resp.json())
@@ -88,6 +89,41 @@ function makeDrink(event) {
   .then(showOneDrink)
 }
 
+const loginBtn = document.querySelector('#login-button')
+const loginForm = document.querySelector('.container')
+let adduserLogin = false
+const submitButton = document.querySelector('.login-form')
+
+loginBtn.addEventListener('click', () => {
+  // hide & seek with the form
+  addLoginForm = !addLoginForm
+  if (addLoginForm) {
+    loginForm.style.display = 'block'
+
+  } else {
+    loginForm.style.display = 'none'
+  }
+})
+
+// submitButton.addEventListener('submit', handleLoginForm)
+
+// function handleLoginForm (e){
+//   e.preventDefault(e)
+//   updateLoginForm(e)
+//   postLoginForm(e)
+// }
+
+
+// function updatetLoginForm(e){
+//   let nameInput = document.querySelector('#user-name')
+//   let studentTrue = document.querySelector('#flatiron-student')
+//   let studentFalse = document.querySelector('#not-a-flatiron-student')
 
 
 
+
+// }
+
+// function postLoginForm(e){
+
+// }
