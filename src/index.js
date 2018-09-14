@@ -1,6 +1,6 @@
 console.log("DOM loaded");
 
-const drinksUrl = 'http://localhost:3000/api/v1/drinks?page=1&per_page=2';
+const drinksURL = 'http://localhost:3000/api/v1/drinks?page=1&per_page=2';
 const drinksDiv = document.getElementsByClassName("flex")[1];
 const viewDrinks = document.getElementById("view-drinks");
 const forward = document.getElementById("right-button");
@@ -9,7 +9,7 @@ const submitBtn = document.getElementById("submit-drink-button");
 const newDrinkForm = document.getElementById("make-drink");
 let page = 1;
 
-fetch(drinksUrl)
+fetch(drinksURL)
   .then(res => res.json())
   .then(showAllDrinks)
 
@@ -62,7 +62,7 @@ function makeDrink(event) {
   console.log("clicked submit")
 
   let name = document.getElementById("drinkName").value;
-  let image = document.getElementById("userName").value;
+  let image = "https://images.unsplash.com/photo-1527838016968-2191bb805fc1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjYxNDV9&s=cf3c82c2823ad5249318959ae379a523&auto=format&fit=crop&w=1904&q=80";
   let instructions = document.getElementById("drinkInstructions");
   let likes = 0;
   let ingredient1 = document.getElementById("drinkIng1");
@@ -72,23 +72,17 @@ function makeDrink(event) {
   let ingredient5 = document.getElementById("drinkIng5");
   let ingredient6 = document.getElementById("drinkIng6");
 
-  fetch(drinksURL, {
+  fetch("http://localhost:3000/api/v1/drinks", {
     method: "POST",
     headers: {
-      "Content-Type"
+      "Content-Type": "application/json"
     },
-    body: {
-      name = name,
+    body: JSON.stringify({
+      name: name,
+      image: image,
       // userid?
-      instructions = instructions,
-      likes = 0
-      // ingredient1 = document.getElementById("drinkIng1");
-      // ingredient2 = document.getElementById("drinkIng2");
-      // ingredient3 = document.getElementById("drinkIng3");
-      // ingredient4 = document.getElementById("drinkIng4");
-      // ingredient5 = document.getElementById("drinkIng5");
-      // ingredient6 = document.getElementById("drinkIng6");
-    }
+      likes: 0
+    })
   })
   .then(resp => resp.json())
   .then(showOneDrink)
