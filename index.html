@@ -18,6 +18,34 @@
 			<header id="header">
 			</header>
 
+
+			<!--login form-->
+
+					<div class="container">
+						<form class="login-form" style="">
+							<h3>Username</h3>
+							<input id="user-name" type="text" name="name" value="" placeholder="Enter your name..." class="input-text">
+							<br>
+							<fieldset>
+						<legend>Are you a Flatiron Student?</legend>
+						<div>
+								<input type="radio" id="flatiron-student" name="student" value="true" />
+								<label for="yes">Yes</label>
+						</div>
+						<div>
+								<input type="radio" id="not-a-flatiron-student" name="student" value="false"/>
+								<label for="no">No</label>
+						</div>
+						</fieldset>
+							<input type="submit" name="submit" value="Login User" class="submit">
+						</form>
+					</div>
+			
+
+
+
+
+
 		<!-- Welcome/Login -->
 			<section id="banner">
 				<div class="inner">
@@ -48,7 +76,7 @@
 					</div>
 
 					<footer>
-						<a href="#" class="button">Login</a>
+						<a href="#" id= "login-button" class="button">Login</a>
 					</footer>
 				</div>
 			</section>
@@ -70,7 +98,7 @@
 			</section>
 
 			<!-- Make a drink: -->
-			
+
 			<section>
 				<div class="inner" id="make-drink">
 					<br><br>
@@ -103,14 +131,14 @@
 							<label for="text">Instructions</label>
 							<textarea name="text" id="text" rows="9" placeholder="Shaken or stirred?  Tell us more.."></textarea>
 						</div>
-						
+
 						<ul class="actions">
 							<li><input value="Submit your drink" class="button alt" type="submit"></li>
 						</ul>
 					</form>
 				</div>
 			</section>
-			
+
 			<!-- Your bar: -->
 			<section id="banner">
 				<div class="inner" id="your-bar">
